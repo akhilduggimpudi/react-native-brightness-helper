@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+import type { Float } from 'react-native/Libraries/Types/CodegenTypes';
 
 const LINKING_ERROR =
   `The package 'react-native-brightness-helper' doesn't seem to be linked. Make sure: \n\n` +
@@ -17,6 +18,10 @@ const BrightnessHelper = NativeModules.BrightnessHelper
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return BrightnessHelper.multiply(a, b);
+export async function setBrightness(brightnessLevel: Float) {
+  return await BrightnessHelper.setBrightness(brightnessLevel);
+}
+
+export async function getBrightness() {
+  return await BrightnessHelper.getBrightness();
 }

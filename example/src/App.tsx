@@ -1,17 +1,25 @@
 import { useState, useEffect } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-brightness-helper';
+import { getBrightness, setBrightness } from 'react-native-brightness-helper';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
+  const [brightnessLevel, setBrightnessLevel] = useState<number | undefined>();
 
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    const screenBrightness = async () => {
+      const screenBrightnessLevel = await getBrightness();
+      setBrightnessLevel(screenBrightnessLevel);
+      if (screenBrightnessLevel < 0.5) {
+        await setBrightness(0.6);
+      }
+    };
+
+    screenBrightness();
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result: {brightnessLevel}</Text>
     </View>
   );
 }
