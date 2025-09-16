@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/akhilduggimpudi/react-native-brightness-helper/compare/v1.1.0...v1.2.0) (2025-09-16)
+
+
+### Features
+
+* updated turbo moduels path ([dcb3936](https://github.com/akhilduggimpudi/react-native-brightness-helper/commit/dcb3936b46fd677ef6aea94359abd1c4be6e7a0f))
+
 ## 1.1.0 (2025-09-16)
 
 
