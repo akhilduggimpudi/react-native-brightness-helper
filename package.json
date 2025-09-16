@@ -184,7 +184,7 @@
   "codegenConfig": {
     "name": "NativeBrightnessHelperSpec",
     "type": "modules",
-    "jsSrcsDir": "specs",
+    "jsSrcsDir": "./src/specs",
     "android": {
       "javaPackageName": "com.brightnesshelper"
     }
