@@ -1,6 +1,6 @@
 {
   "name": "react-native-brightness-helper",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A lib which can set and get device brightness for react native",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -180,6 +180,14 @@
         }
       ]
     ]
+  },
+  "codegenConfig": {
+    "name": "NativeBrightnessHelperSpec",
+    "type": "modules",
+    "jsSrcsDir": "specs",
+    "android": {
+      "javaPackageName": "com.brightnesshelper"
+    }
   },
   "create-react-native-library": {
     "type": "module-legacy",

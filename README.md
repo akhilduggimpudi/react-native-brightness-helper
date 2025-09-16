@@ -1,22 +1,31 @@
 # react-native-brightness-helper
 
-A lib which can set and get device brightness for react native
+A React Native library to **get and set device brightness**, now supporting the **New Architecture (TurboModules)**.
+
+---
 
 ## Installation
 
 ```sh
 npm install react-native-brightness-helper
-```
+# or
+yarn add react-native-brightness-helper
+
+cd ios
+pod install
 
 ## Usage
 
 
 ```js
-import { multiply } from 'react-native-brightness-helper';
+import BrightnessHelper, { setBrightness, getBrightness } from 'react-native-brightness-helper';
 
-// ...
+// Set brightness (value between 0 and 1)
+await setBrightness(0.5);
 
-const result = await multiply(3, 7);
+// Get current brightness
+const currentBrightness = await getBrightness();
+console.log('Current brightness:', currentBrightness);
 ```
 
 
